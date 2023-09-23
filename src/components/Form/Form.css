@@ -1,0 +1,35 @@
+.form {
+  margin-top: 1rem;
+}
+
+.form__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--grey-800);
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.25rem 0;
+  outline: 0px;
+  border: 0px;
+  border-bottom: 1px solid var(--grey-300);
+  font-size: 1rem;
+  color: var(--grey-700);
+}
+
+.form__input:focus{
+  border-bottom: 1px solid var(--black);
+}
+
+.form__input-msg {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+
+.form--error .form__input,
+.form--error .form__input-msg {
+  color: var(--red);
+}

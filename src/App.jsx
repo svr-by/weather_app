@@ -1,9 +1,13 @@
-import Box from './components/Box/Box';
+import { Box, Form } from './components';
 
 export default function App() {
+  const handleCreate = (note) => {
+    console.log(note);
+  };
+
   return (
     <Box>
-      App
+      <Form isLoading={false} onSubmit={handleCreate} />
     </Box>
   );
 }
