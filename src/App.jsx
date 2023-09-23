@@ -1,7 +1,9 @@
+import Box from './components/Box/Box';
+
 export default function App() {
   return (
-    <div>
+    <Box>
       App
-    </div>
+    </Box>
   );
 }
