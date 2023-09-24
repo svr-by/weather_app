@@ -1,23 +1,18 @@
+import { useSelector, useDispatch } from 'react-redux';
+
+import { addNote, deleteNote } from './redux/notesSlice';
 import { Box, Form, List } from './components';
 
 export default function App() {
-  const notes = [
-    { 
-      id: '169554420307060', 
-      message: 'test', 
-      time: 1695544203070, 
-      temp: 17.08, 
-      icon: '04d',
-      desc:'broken clouds'
-    }
-  ];
+  const { data: notes } = useSelector(state => state.notes);
+  const dispatch = useDispatch();
 
   const handleCreate = (note) => {
-    console.log(note);
+    dispatch(addNote(note));
   };
 
   const handleDelete = (noteId) => {
-    console.log(noteId);
+    dispatch(deleteNote(noteId));
   };
 
   return (
