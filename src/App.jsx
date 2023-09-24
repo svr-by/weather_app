@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { addNote, deleteNote } from './redux/notesSlice';
+import { addNoteWithWeather, deleteNote } from './redux/notesSlice';
 import { Box, Form, List } from './components';
 
 export default function App() {
-  const { data: notes } = useSelector(state => state.notes);
+  const { data: notes, isLoading} = useSelector(state => state.notes);
   const dispatch = useDispatch();
 
   const handleCreate = (note) => {
-    dispatch(addNote(note));
+    dispatch(addNoteWithWeather(note));
   };
 
   const handleDelete = (noteId) => {
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <Box>
       <List notes={notes} onDelete={handleDelete} />
-      <Form isLoading={false} onSubmit={handleCreate} />
+      <Form isLoading={isLoading} onSubmit={handleCreate} />
     </Box>
   );
 }

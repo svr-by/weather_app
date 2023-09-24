@@ -1,9 +1,10 @@
 import { formatTemp, formatDate, formatTime } from '../../services/formatServices';
+import { getIconWeatherUrl } from '../../services/endpointServices';
 import './Note.css';
 
 export default function Note({data, onDelete}) {
   const {id, message, time, temp, icon, desc} = data;
-  const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
+  const iconUrl = getIconWeatherUrl(icon);
   const tempSrt = formatTemp(temp);
   const dateSrt = formatDate(time);
   const timeStr = formatTime(time);
