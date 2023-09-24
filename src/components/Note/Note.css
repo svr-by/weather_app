@@ -1,0 +1,51 @@
+.note {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--grey-400);
+  border-radius: 0.5rem;
+  color: var(--grey-600);
+}
+
+.note__message {
+  margin-right: auto;
+  color: var(--grey-800);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.note__weather {
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.note__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.note__info {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+.note__erase-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.note__erase-icon:hover {
+  background-color: var(--grey-200);
+}
